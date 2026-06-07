@@ -1,0 +1,15 @@
+.top-menu-admin {
+ 
+ 
+    &__logo {
+      width: 450px;
+    
+     
+    }
+  
+    i.icon {
+      margin: 0 !important;
+    }
+
+  }
+  

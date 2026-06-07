@@ -1,0 +1,9 @@
+.paginacion{
+
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items:baseline;
+    margin-bottom: 5rem;    
+    gap: 10px;
+}

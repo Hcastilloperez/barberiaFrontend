@@ -1,0 +1,23 @@
+
+.side-menu-admin {
+    .ui.menu {
+      width: 200px !important;
+      overflow: hidden;
+      padding-top: 6em;
+      z-index: 99 !important;
+      background-color:rgb(255, 255, 255);
+  
+      i.icon {
+        float: initial !important;
+        margin: 0 !important;
+        margin-right: 10px !important;
+      }
+    }
+  
+    .content {
+      position: absolute;
+      right: 0;
+      padding: 20px;
+      width: calc(100% - 250px);
+    }
+  }
