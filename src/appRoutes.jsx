@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import PrivateLayout from "./components/layout/Private/layoutPrivate";
-import PublicLayout from "./components/layout/Public/layoutPublic";
-import LayoutBarbero from "./components/layout/Private/layoutBarbero";
-import SuperLayout from "./components/layout/SuperAdmin/SuperLayout";
+import PrivateLayout from "@/components/Layout/Private/layoutPrivate";
+import PublicLayout from "@/components/Layout/Public/layoutPublic";
+import LayoutBarbero from "@/components/Layout/Private/layoutBarbero";
+import SuperLayout from "@/components/Layout/SuperAdmin/SuperLayout";
 
 import Homepage from "@/Pages/Public/Home";
 import LoginPage from "@/Pages/Public/Login";
