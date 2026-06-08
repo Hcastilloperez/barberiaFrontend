@@ -24,7 +24,7 @@ import PagosPage from "./Pages/Private/pagos/pagos";
 import BarberosPage from "@/Pages/Private/barberos/barberos";
 import InfoBarberoPage from "@/Pages/Private/barberos/InfoBarbero";
 
-import InfoOrdenesPage from "@/pages/Private/orders/infoOrdenes";
+import InfoOrdenesPage from "@/Pages/Private/orders/infoOrdenes";
 import DetailOrdenesPage from "@/Pages/Private/orders/DetailOrdenes";
 import HistoricoOrdenesPage from "@/Pages/Private/orders/HistoricoOrdenes";
 
