@@ -1,4 +1,4 @@
-import { fetchService } from "../config/axios";
+import { fetchService } from "../Config/Axios";
 //const baseUrl = "http://localhost:4000/api/users/login";
 
 const IntentLogin = async (payload) => {

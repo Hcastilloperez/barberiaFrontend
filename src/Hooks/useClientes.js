@@ -1,5 +1,4 @@
-import { fetchService } from "../config/axios";
-
+import { fetchService } from "../Config/Axios";
 const GetClientes = async () => {
   try {
     const { data } = await fetchService("clientes", "get");

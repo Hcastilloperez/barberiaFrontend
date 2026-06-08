@@ -1,4 +1,4 @@
-import { fetchService } from "../config/axios";
+import { fetchService } from "../Config/Axios";
 
 const CargarImagen = async (payload) => {
   try {
