@@ -15,7 +15,7 @@ import LogoScissors from "@/components/common/LogoScissors";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import TableCumpleClientes from "@/components/Admin/clientes/tableCumpleCliente/TableCumpleCiente";
 
-import Reloj from "../../../components/private/reloj/Reloj.jsx";
+import Reloj from "../../../components/Private/Reloj/Reloj.jsx";
 
 import { GetOrdenesbyEstado, GetOrdenesbyVentaMes } from "@/Hooks/useOrdenes";
 import { GetOrdenServiciobyOrden } from "@/Hooks/useOrdenServicio";
