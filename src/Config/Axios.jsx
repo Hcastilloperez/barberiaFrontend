@@ -4,7 +4,7 @@ import axios from "axios";
 
 //const BASE_URL = "http://localhost:4001/api";
 //const BASE_URL = "http://149.50.144.72:4000/api";
-const BASE_URL = "http://192.167.1.54:4001/api";
+const BASE_URL = "http://192.168.1.54:4001/api";
 
 export const fetchService = async (
   endpoint,
@@ -34,7 +34,7 @@ export const fetchService = async (
 
 //export const dir = "http://localhost:4001/api/";
 //export const dir = "http://149.50.144.72:4000/api/";
-export const dir = "http://192.167.1.54:4001/api/";
+export const dir = "http://192.168.1.54:4001/api/";
 
 //export const FRONTEND_URL = "http://localhost:5172";
-export const FRONTEND_URL = "http://192.167.1.54";
+export const FRONTEND_URL = "http://192.168.1.54";
