@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import Cabecera from "@/components/Layout/Private/Cabezera";
-import TableConfig from "@/components/Admin/Config/tableConfig/TableConfig";
-import ListConfig from "@/components/Admin/Config/listConfig/ListConfig";
-import FormConfig from "@/components/Admin/Config/formConfig/FormConfig";
+import TableConfig from "@/components/Admin/config/tableConfig/TableConfig";
+import ListConfig from "@/components/Admin/config/listConfig/ListConfig";
+import FormConfig from "@/components/Admin/config/formConfig/FormConfig";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 import { GetAllComodines, UpdateComodin } from "@/Hooks/useComodines";
