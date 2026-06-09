@@ -34,7 +34,7 @@ const TenantLogin = () => {
 
   const validateTenant = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:4001/api/tenants/${slug}`);
+      const { data } = await axios.get(`http://192.168.1.54:4001/api/tenants/${slug}`);
       if (data && data.estado === "activo") {
         setTenantValid(data);
       } else {
@@ -62,7 +62,7 @@ const TenantLogin = () => {
       setLoading(true);
       setError("");
       const { data } = await axios.post(
-        `http://localhost:4001/api/tenants/${slug}/login`,
+        `http://192.168.1.54:4001/api/tenants/${slug}/login`,
         { correo: form.correo, clave: form.clave }
       );
       localStorage.setItem("token", JSON.stringify(data.jwt));
