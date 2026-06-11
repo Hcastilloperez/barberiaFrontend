@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLoginAction } from "@/redux/slices/authSlice";
-import { fetchService } from "@/Config/Axios.jsx";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { User, Lock, ChevronRight, Shield, Loader2 } from "lucide-react";
 import LogoScissors from "@/components/common/LogoScissors";
+import { IntentSuperLogin } from "@/Hooks/useSuperLogin";
 
 const SuperLogin = () => {
   const [form, setForm] = useState({ correo: "", clave: "" });
@@ -27,7 +27,7 @@ const SuperLogin = () => {
     setError("");
 
     try {
-      const { data } = await fetchService("usuarios/super/login", "post", form);
+      const data = await IntentSuperLogin(form);
       localStorage.setItem("token", JSON.stringify(data.jwt));
       dispatch(setLoginAction(data));
       navigate("/super-dashboard");

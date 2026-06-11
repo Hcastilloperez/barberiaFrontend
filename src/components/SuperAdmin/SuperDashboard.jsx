@@ -49,6 +49,7 @@ const SuperDashboard = () => {
   const loadTenants = async () => {
     try {
       const { data } = await fetchService("tenants", "get");
+      console.log("DEBUG loadTenants - data:", data);
       setTenants(data);
     } catch (error) {
       console.error("Error loading tenants", error);
@@ -171,7 +172,7 @@ const SuperDashboard = () => {
                 </div>
                 <Badge
                   variant={tenant.estado === "activo" ? "default" : "secondary"}
-                  className={tenant.estado === "activo" ? "bg-emerald-500" : ""}
+                  className={tenant.estado === "activo" ? "bg-emerald-500" : "bg-red-100 text-red-700"}
                 >
                   {tenant.estado === "activo" ? (
                     <>
@@ -218,7 +219,7 @@ const SuperDashboard = () => {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1"
+                  className={`flex-1 ${tenant.estado === "activo" ? "text-red-600 hover:text-red-700 hover:bg-red-50 hover:border-red-200" : "text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 hover:border-emerald-200"}`}
                   onClick={() => handleToggleEstado(tenant)}
                 >
                   {tenant.estado === "activo" ? (

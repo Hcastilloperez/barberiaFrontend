@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setLoginAction } from "@/redux/slices/authSlice";
-import { fetchService } from "@/Config/Axios.jsx";
-import axios from "axios";
+import { GetTenantBySlug, LoginTenant } from "@/Hooks/useTenant";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,7 +33,7 @@ const TenantLogin = () => {
 
   const validateTenant = async () => {
     try {
-      const { data } = await axios.get(`http://192.168.1.54:4001/api/tenants/${slug}`);
+      const data = await GetTenantBySlug(slug);
       if (data && data.estado === "activo") {
         setTenantValid(data);
       } else {
@@ -61,10 +60,11 @@ const TenantLogin = () => {
     try {
       setLoading(true);
       setError("");
-      const { data } = await axios.post(
-        `http://192.168.1.54:4001/api/tenants/${slug}/login`,
-        { correo: form.correo, clave: form.clave }
-      );
+      const data = await LoginTenant({
+        correo: form.correo,
+        clave: form.clave,
+        tenantId: tenantValid.id
+      });
       localStorage.setItem("token", JSON.stringify(data.jwt));
       localStorage.setItem("tenantSlug", slug);
       dispatch(setLoginAction(data));
